@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./d_files/0.e3a0f5000dd748a0b7b6.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -89,7 +90,13 @@
                 <h4 class="footer-title">Another universe</h4>
                 <div class="languages">
                     <img src="./assets/images/usa.png" alt="">
-                    <span>English, USA</span> <i class="bx bx-chevron-down"></i>
+                    <select id="country">
+                            <option value="English">English, USA</option>
+                            <option value="Hindi">Hindi, India</option>
+                            <option value="Polski">Polski, Poland</option>
+                            <option value="French">French, France</option>
+                            <option value="Kurdish">Kurdish, Turkey</option>
+                    </select>
                 </div>
                 <div class="social-media">
                       <a href="https://twitter.com/eighred" target="_blank" class="sm-link">
@@ -143,6 +150,13 @@
         </div>
 
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 1000
+        });
+    </script>
 </body>
 
 </html>
