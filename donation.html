@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="./d_files/0.e3a0f5000dd748a0b7b6.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body bgcolor="000000">
+<body>
     <header class="main-header container">
         <nav class="main-nav">
             <a href="./index.html" class="logo">
@@ -38,8 +38,7 @@
                 </li>
             </ul>
             <div class="nav-item-right">
-                <a href="donation.html" target="_blank"
-                    class="btn btn-small btn-light btn-login">Donation</a>
+                <a href="donation.html" target="_blank" class="btn btn-small btn-light btn-login">Donation</a>
                 <a href="menu.html"> <span class="mobile-toggle">
                         <i class="bx bx-menu btn-open"></i>
                         <i class="bx bx-x btn-close"></i>
@@ -47,36 +46,19 @@
             </div>
         </nav>
     </header>
-    <div style="height:70px"></div>
-    <div class="row-31oovZ content-2g_VmE">
-        <div class="heroBody-1AD8bi">
-          <h1 class="h1-3dtzWh">THE UNIVERSE THAT EVERYONE DREAMS OF</h1>
-          <div class="text-2H5FnP textLarge-Dd0mXv heroSubtitle-1A9Amr">Your world hangs out here. Eighred is a universe that more than a hundred million people use to spend time with their friends and communities.</div>
-        </div>
-        <div class="background-3UE8rf"><img class="backgroundImage-1syl2D" src="assets/images/hello.webp" alt="" draggable="false"></div>
-      </div>
-    <div style="height:100px"></div>
-    <div class="grid-3d2PVT container-1gLEDw">
+    <div class="grid-3d2PVT">
         <div class="row-31oovZ">
-            <h2 class="h2-1JkdZe title-2f0oyD">BUILDING THE METAVERSE</h2>
-            <div class="text-2H5FnP textMedium-2cZ80w subtitle-jVyV5m">
-                We’re already developing exciting new technologies
-                that will help people connect and explore in the Metaverse.
-                </div>
-        </div>
-        <div class="row-31oovZ">
-            <div class="videoOuterContainer-1yhi9y">
-                <div class="videoMiddleContainer-3HCvLI">
-                    <div class="videoInnerContainer-24xiSV"><iframe class="video-21dLmP"
-                            src="https://www.youtube.com/embed/QQgv6Wm1ea4"
-                            allowfullscreen=""
-                            sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                            id="widget6"></iframe></div>
+            <div class="section-3zn4yL">
+                <div class="document-25D7S4">
+                    <h1>Donation</h1>
+                    <p>AKBANK iban no :TR33 0006 1005 1978 6457 8413 26</p>
+                    <div style="height:7px"></div>
+                    <button class="btn btn-small btn-brand" onclick='copyText("TR33 0006 1005 1978 6457 8413 26")'>copy iban</button>
+                    <div style="height:350px"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div style="height:70px"></div>
     <footer class="main-footer">
         <div class="row container">
             <div class="info-box">
@@ -84,15 +66,15 @@
                 <div class="languages">
                     <img src="./assets/images/usa.png" alt="">
                     <select id="country">
-                            <option value="English">English, USA</option>
-                            <option value="Hindi">Hindi, India</option>
-                            <option value="Polski">Polski, Poland</option>
-                            <option value="French">French, France</option>
-                            <option value="Kurdish">Kurdish, Turkey</option>
+                        <option value="English">English, USA</option>
+                        <option value="Hindi">Hindi, India</option>
+                        <option value="Polski">Polski, Poland</option>
+                        <option value="French">French, France</option>
+                        <option value="Kurdish">Kurdish, Turkey</option>
                     </select>
                 </div>
                 <div class="social-media">
-                      <a href="https://twitter.com/eighred" target="_blank" class="sm-link">
+                    <a href="https://twitter.com/eighred" target="_blank" class="sm-link">
                         <i class="bx bxl-twitter"></i>
                     </a>
                     <a href="https://instagram.com/eighred" target="_blank" class="sm-link">
@@ -104,7 +86,7 @@
                     <a href="https://www.youtube.com/channel/UC6JGsziXGr0MADqJhjocxDQ" target="_blank" class="sm-link">
                         <i class="bx bxl-youtube"></i>
                     </a>
-                
+
                 </div>
             </div>
 
@@ -127,11 +109,11 @@
                 <a href="career.html" class="footer-link">Career</a>
                 <a href="metaverse.html" class="footer-link">Blog</a>
                 <a href="career.html" class="footer-link">Developers</a>
-                
+
             </div>
             <div class="footer-links-group">
-                 <h5 class="footer-title">Policies</h5>
-                <a href="privacy.html" class="footer-link">Privacy</a>  
+                <h5 class="footer-title">Policies</h5>
+                <a href="privacy.html" class="footer-link">Privacy</a>
                 <a href="lisance.html" class="footer-link">Licences</a>
             </div>
 
@@ -142,8 +124,7 @@
             <a href="index.html" class="logo">
                 <img src="media/eighred.png" alt="">
             </a>
-            <a href="donation.html" target="_blank"
-                class="btn btn-small btn-brand">Donation</a>
+            <a href="donation.html" target="_blank" class="btn btn-small btn-brand">Donation</a>
         </div>
 
     </footer>
@@ -153,6 +134,21 @@
             offset: 400,
             duration: 1000
         });
+        // This must be triggered by a user event.
+        function copyText(text) {
+            // Create the textarea input to hold our text.
+            const element = document.createElement('textarea');
+            element.value = text;
+            // Add it to the document so that it can be focused.
+            document.body.appendChild(element);
+            // Focus on the element so that it can be copied.
+            element.focus();
+            element.setSelectionRange(0, element.value.length);
+            // Execute the copy command.
+            document.execCommand('copy');
+            // Remove the element to keep the document clear.
+            document.body.removeChild(element);
+        }
     </script>
 </body>
 
