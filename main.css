@@ -10,3 +10,18 @@
       color: #fff;
       border: none;
   }
+  .tip-button {
+    width: 304px;
+    height: 53px;
+    background-size: 100%;
+    background-image: url('assets/images/pay.png');
+    cursor: pointer;
+  }
+  
+  .tip-button:hover {
+    background-image: url('assets/images/pay.png');
+  }
+  
+  .tip-button:active {
+    background-image: url('assets/images/pay.png');
+  }

@@ -51,9 +51,8 @@
             <div class="section-3zn4yL">
                 <div class="document-25D7S4">
                     <h1>Donation</h1>
-                    <p>AKBANK iban no :TR33 0006 1005 1978 6457 8413 26</p>
-                    <div style="height:7px"></div>
-                    <button class="btn btn-small btn-brand" onclick='copyText("TR33 0006 1005 1978 6457 8413 26")'>copy iban</button>
+                    <div style="height:20px"></div>
+                    <div class="tip-button"></div>
                     <div style="height:350px"></div>
                 </div>
             </div>
@@ -134,22 +133,26 @@
             offset: 400,
             duration: 1000
         });
-        // This must be triggered by a user event.
-        function copyText(text) {
-            // Create the textarea input to hold our text.
-            const element = document.createElement('textarea');
-            element.value = text;
-            // Add it to the document so that it can be focused.
-            document.body.appendChild(element);
-            // Focus on the element so that it can be copied.
-            element.focus();
-            element.setSelectionRange(0, element.value.length);
-            // Execute the copy command.
-            document.execCommand('copy');
-            // Remove the element to keep the document clear.
-            document.body.removeChild(element);
-        }
-    </script>
+    </script><script>
+var tipButton = document.querySelector('.tip-button');
+tipButton.addEventListener('click', function() {
+  if (typeof web3 === 'undefined') {
+    return alert('You need to install MetaMask to use this feature.')
+  }
+  var user_address = web3.eth.accounts[0];
+  if (typeof user_address === 'undefined') {
+    return alert('You need to log in MetaMask to use this feature.')
+  }
+  web3.eth.sendTransaction({
+    to: "0xB341fD1BE46e4EbD889cfC0de0075a7cd3Ff465C",
+    from: user_address,
+    value: web3.toWei('0.005', 'ether'),
+  }, function (err, transactionHash) {
+    if (err) return alert('Thanks for trying out!');
+    alert('Thanks for the generosity!!');
+  })
+})
+</script>
 </body>
 
 </html>
