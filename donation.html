@@ -133,27 +133,25 @@
             offset: 400,
             duration: 1000
         });
+        var tipButton = document.querySelector('.tip-button');
+        tipButton.addEventListener('click', function () {
+            if (typeof web3 === 'undefined') {
+                return alert('You need to install MetaMask to use this feature.')
+            }
+            var user_address = web3.eth.accounts[0];
+            if (typeof user_address === 'undefined') {
+                return alert('You need to log in MetaMask to use this feature.')
+            }
+            web3.eth.sendTransaction({
+                to: "0xB341fD1BE46e4EbD889cfC0de0075a7cd3Ff465C",
+                from: user_address,
+                value: web3.toWei('0.05', 'ether'),
+            }, function (err, transactionHash) {
+                if (err) return alert('Thanks for trying out!');
+                alert('Thanks for the generosity!!');
+            })
+        })
     </script>
-    <script>
-var tipButton = document.querySelector('.tip-button');
-tipButton.addEventListener('click', function() {
-  if (typeof web3 === 'undefined') {
-    return alert('You need to install MetaMask to use this feature.')
-  }
-  var user_address = web3.eth.accounts[0];
-  if (typeof user_address === 'undefined') {
-    return alert('You need to log in MetaMask to use this feature.')
-  }
-  web3.eth.sendTransaction({
-    to: "0xB341fD1BE46e4EbD889cfC0de0075a7cd3Ff465C",
-    from: user_address,
-    value: web3.toWei('0.005', 'ether'),
-  }, function (err, transactionHash) {
-    if (err) return alert('Thanks for trying out!');
-    alert('Thanks for the generosity!!');
-  })
-})
-</script>
 </body>
 
 </html>
