@@ -90,13 +90,12 @@
                 <h4 class="footer-title">Another universe</h4>
                 <div class="languages">
                     <img src="./assets/images/usa.png" alt="">
-                    <select id="country">
-                            <option value="English">English, USA</option>
-                            <option value="Hindi">Hindi, India</option>
-                            <option value="Polski">Polski, Poland</option>
-                            <option value="French">French, France</option>
-                            <option value="Kurdish">Kurdish, Turkey</option>
-                    </select>
+                    <select
+                    onchange="this.options[this.selectedIndex].value != '' ? location = this.options[this.selectedIndex].value : false"
+                    id="country">
+                    <option value="">English</option>
+                    <option value="">Türkçe</option>
+                </select>
                 </div>
                 <div class="social-media">
                       <a href="https://twitter.com/eighred" target="_blank" class="sm-link">
