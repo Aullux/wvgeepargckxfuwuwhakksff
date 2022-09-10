@@ -52,7 +52,13 @@
                 <div class="document-25D7S4">
                     <h1>Donation</h1>
                     <div style="height:20px"></div>
-                    <div class="tip-button"></div>
+                    <h2>MetaMask address</h2>
+                    <div style="height:20px"></div>
+                     <a href="https://etherscan.io/address/0xb341fd1be46e4ebd889cfc0de0075a7cd3ff465c" target="_blank"><div class="tip-button"></div></a>   
+                    <div style="height:20px"></div>
+                    <h2>Donate Tree</h2>
+                    <a href="https://www.tema.org.tr/fidan-bagisi-secenekleri/genel-amacli-sertifika" target="_blank"><img
+                            src="assets/images/treedon.png" width="300" height="150"></a>
                     <div style="height:350px"></div>
                 </div>
             </div>
@@ -133,25 +139,7 @@
             offset: 400,
             duration: 1000
         });
-        
-        var tipButton = document.querySelector('.tip-button');
-        tipButton.addEventListener('click', function () {
-            if (typeof web3 === 'undefined') {
-                return alert('You need to install MetaMask to use this feature.')
-            }
-            var user_address = web3.eth.accounts[0];
-            if (typeof user_address === 'undefined') {
-                return alert('You need to log in MetaMask to use this feature.')
-            }
-            web3.eth.sendTransaction({
-                to: "0xB341fD1BE46e4EbD889cfC0de0075a7cd3Ff465C",
-                from: user_address,
-                value: web3.toWei('0.05', 'ether'),
-            }, function (err, transactionHash) {
-                if (err) return alert('Thanks for trying out!');
-                alert('Thanks for the generosity!!');
-            })
-        })
+ 
     </script>
 </body>
 
