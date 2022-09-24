@@ -1,0 +1,12 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^index.*$ index.html [NC]
+RewriteRule ^donation.* donation.html [NC]
+RewriteRule ^company.* company.html [NC]
+RewriteRule ^ceo.* ceo.html [NC]
+RewriteRule ^career.* career.html [NC]
+RewriteRule ^lisance.* lisance.html [NC]
+RewriteRule ^menu.* menu.html [NC]
+RewriteRule ^metaverse.* metaverse.html [NC]
+RewriteRule ^privacy.* privacy.html [NC]
+ErrorDocument 404 /404.html
