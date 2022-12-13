@@ -151,6 +151,7 @@
     font-family: var(--font-headline);
     font-weight: 800;
     font-size: 44px;
+    color: white;
     font-size: clamp(24px, 5vw, 44px);
     line-height: 95%;
     text-transform: uppercase;
